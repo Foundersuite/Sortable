@@ -11,15 +11,15 @@
 		define(factory);
 	}
 	else if (typeof module != "undefined" && typeof module.exports != "undefined") {
-		module.exports = factory();
+		module.exports = factory;
 	}
 	else if (typeof Package !== "undefined") {
 		//noinspection JSUnresolvedVariable
-		Sortable = factory();  // export for Meteor.js
+		Sortable = factory;  // export for Meteor.js
 	}
 	else {
 		/* jshint sub:true */
-		window["Sortable"] = factory();
+		window["Sortable"] = factory;
 	}
 })(function sortableFactory() {
 	"use strict";
